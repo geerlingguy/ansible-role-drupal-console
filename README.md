@@ -6,7 +6,7 @@ Installs [Drupal Console](http://drupalconsole.com/) on any Linux or UNIX system
 
 ## Requirements
 
-`curl` and `php` (version 5.3+) should be installed and working.
+`curl` and `php` (version 5.4+) should be installed and working.
 
 ## Role Variables
 

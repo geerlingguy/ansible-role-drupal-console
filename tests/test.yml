@@ -1,6 +1,11 @@
 ---
 - hosts: localhost
   remote_user: root
+
+  pre_tasks:
+    - name: Add ondrej repository for PHP 5.5.
+      apt_repository: repo='ppa:ondrej/php5'
+
   roles:
     - geerlingguy.php
     - ansible-role-drupal-console
