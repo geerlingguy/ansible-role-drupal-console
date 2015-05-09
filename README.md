@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-drupal-console.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-drupal-console)
 
-Installs Drupal Console on any Linux or UNIX system.
+Installs [Drupal Console](http://drupalconsole.com/) on any Linux or UNIX system.
 
 ## Requirements
 
