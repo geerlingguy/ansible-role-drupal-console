@@ -28,6 +28,10 @@ The path where Drupal Console will be installed and available to your system. Sh
 
 After the playbook runs, `drupal` will be placed in `/usr/local/bin/drupal` (this location is configurable), and will be accessible via normal system accounts.
 
+    drupal_console_keep_updated: false
+
+Set this to `true` to update Drupal Console to the latest release every time the playbook is run.
+
 ## License
 
 MIT / BSD
