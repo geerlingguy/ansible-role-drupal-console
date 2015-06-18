@@ -16,6 +16,10 @@ Available variables are listed below, along with default values (see `defaults/m
 
 The path where Drupal Console will be installed and available to your system. Should be in your user's `$PATH` so you can use Drupal Console by entering `drupal` instead of the full path.
 
+    drupal_console_keep_updated: true
+
+By default, this role will always update Drupal Console to the latest version whenever it's run. If you'd like to change this behavior, switch this variable to `false`.
+
 ## Dependencies
 
   - geerlingguy.php (Installs PHP).

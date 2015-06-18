@@ -17,11 +17,9 @@
     mv console.phar {{ drupal_console_path }}
     creates={{ drupal_console_path }}
 
-# TODO: This command seems to not be available if not running `drupal` inside
-# a drupal installation's root directory :-/
-# - name: Update Drupal Console to latest version (if configured).
-#   shell: >
-#     php {{ drupal_console_path }} self-update
-#   register: drupal_console_update
-#   changed_when: "'console has been updated' in drupal_console_update.stdout"
-#   when: drupal_console_keep_updated
+- name: Update Drupal Console to latest version (if configured).
+  shell: >
+    php {{ drupal_console_path }} self-update
+  register: drupal_console_update
+  changed_when: "'console has been updated' in drupal_console_update.stdout"
+  when: drupal_console_keep_updated
