@@ -12,7 +12,7 @@ Installs [Drupal Console](http://drupalconsole.com/) on any Linux or UNIX system
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    drupal_console_path: /usr/local/bin/composer
+    drupal_console_path: /usr/local/bin/drupal
 
 The path where Drupal Console will be installed and available to your system. Should be in your user's `$PATH` so you can use Drupal Console by entering `drupal` instead of the full path.
 
