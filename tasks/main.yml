@@ -14,7 +14,7 @@
 
 - name: Move Drupal Console into globally-accessible location.
   shell: >
-    mv console.phar {{ drupal_console_path }}
+    mv drupal.phar {{ drupal_console_path }}
     creates={{ drupal_console_path }}
 
 - name: Update Drupal Console to latest version (if configured).
