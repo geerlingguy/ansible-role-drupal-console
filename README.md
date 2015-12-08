@@ -20,6 +20,10 @@ The path where Drupal Console will be installed and available to your system. Sh
 
 By default, this role will always update Drupal Console to the latest version whenever it's run. If you'd like to change this behavior, switch this variable to `false`.
 
+    drupal_console_config: ~/.console
+
+The path to the Drupal Console configuration file.
+
 ## Dependencies
 
   - geerlingguy.php (Installs PHP).
