@@ -16,9 +16,9 @@ Available variables are listed below, along with default values (see `defaults/m
 
 The path where Drupal Console will be installed and available to your system. Should be in your user's `$PATH` so you can use Drupal Console by entering `drupal` instead of the full path.
 
-    drupal_console_keep_updated: true
+    drupal_console_keep_updated: false
 
-By default, this role will always update Drupal Console to the latest version whenever it's run. If you'd like to change this behavior, switch this variable to `false`.
+By default, this role not update Drupal Console when it is run again. If you'd like always update Drupal Console to the latest version when this role is run, switch this variable to `true`.
 
     drupal_console_config: ~/.console
 
