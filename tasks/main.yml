@@ -17,6 +17,11 @@
     mv drupal.phar {{ drupal_console_path }}
     creates={{ drupal_console_path }}
 
+- name: Ensure Drupal Console is executable.
+  file:
+    path: "{{ drupal_console_path }}"
+    mode: 0755
+
 - name: Run Drupal Console init.
   shell: >
     php {{ drupal_console_path }} init
