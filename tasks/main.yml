@@ -9,13 +9,18 @@
 
 - name: Install Drupal Console into the current directory.
   shell: >
-    curl -LSs http://drupalconsole.com/installer | php
+    curl http://drupalconsole.com/installer -L -o drupal.phar
     creates={{ drupal_console_path }}
 
 - name: Move Drupal Console into globally-accessible location.
   shell: >
-    mv console.phar {{ drupal_console_path }}
+    mv drupal.phar {{ drupal_console_path }}
     creates={{ drupal_console_path }}
+
+- name: Run Drupal Console init.
+  shell: >
+    php {{ drupal_console_path }} init
+    creates={{ drupal_console_config }}
 
 - name: Update Drupal Console to latest version (if configured).
   shell: >
