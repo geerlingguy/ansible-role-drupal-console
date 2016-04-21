@@ -1,8 +1,8 @@
 ---
 - name: Install Drupal Console.
   get_url:
-    url=https://drupalconsole.com/installer
-    dest={{ drupal_console_path }}
+    url: https://drupalconsole.com/installer
+    dest: {{ drupal_console_path }}
 
 - name: Ensure Drupal Console is executable.
   file:
