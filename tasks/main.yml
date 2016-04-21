@@ -1,21 +1,8 @@
 ---
-- name: Ensure curl is installed (RedHat).
-  yum: name=curl state=installed
-  when: ansible_os_family == 'RedHat'
-
-- name: Ensure curl is installed (Debian).
-  apt: name=curl state=installed
-  when: ansible_os_family == 'Debian'
-
-- name: Install Drupal Console into the current directory.
-  shell: >
-    curl https://drupalconsole.com/installer -L -o drupal.phar
-    creates={{ drupal_console_path }}
-
-- name: Move Drupal Console into globally-accessible location.
-  shell: >
-    mv drupal.phar {{ drupal_console_path }}
-    creates={{ drupal_console_path }}
+- name: Install Drupal Console.
+  get_url:
+    url=https://drupalconsole.com/installer
+    dest={{ drupal_console_path }}
 
 - name: Ensure Drupal Console is executable.
   file:
