@@ -5,6 +5,11 @@
     php_enable_webserver: false
     drupal_console_keep_updated: true
 
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=yes
+      when: ansible_os_family == 'Debian'
+
   roles:
     - geerlingguy.php
     - role_under_test
