@@ -3,7 +3,7 @@ sudo: required
 
 env:
   global:
-    repository: geerlingguy/docker-ubuntu1604-ansible
+    distro: ubuntu1604
     init: /lib/systemd/systemd
     run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
   matrix:
