@@ -40,9 +40,5 @@ script:
   # Ensure Drupal Console is installed and working.
   - 'docker exec --tty "$(cat ${container_id})" env TERM=xterm drupal list || true'
 
-after_success:
-  # Clean up.
-  - 'docker stop "$(cat ${container_id})"'
-
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
