@@ -7,6 +7,14 @@
     - ansible_distribution == 'Ubuntu'
     - ansible_distribution_version == '14.04'
 
+- name: Upgrade setuptools on Ubuntu 14.04.
+  pip:
+    name: setuptools
+    state: latest
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_version == '14.04'
+
 - name: Ensure urllib3 is available on Ubuntu 14.04.
   pip:
     name: "{{ item }}"
