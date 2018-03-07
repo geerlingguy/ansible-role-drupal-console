@@ -1,4 +1,9 @@
 ---
+- name: Ensure curl is present so get_url behaves consistently.
+  package:
+    name: curl
+    state: present
+
 - name: Install Drupal Console.
   get_url:
     url: https://drupalconsole.com/installer
