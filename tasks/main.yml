@@ -9,8 +9,13 @@
 
 - name: Ensure urllib3 is available on Ubuntu 14.04.
   pip:
-    name: urllib3
+    name: "{{ item }}"
     state: present
+  with_items:
+    - urllib3
+    - pyOpenSSL
+    - ndg-httpsclient
+    - pyasn1
   when:
     - ansible_distribution == 'Ubuntu'
     - ansible_distribution_version == '14.04'
