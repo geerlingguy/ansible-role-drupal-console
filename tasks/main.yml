@@ -1,8 +1,19 @@
 ---
-- name: Ensure curl is present so get_url behaves consistently.
+- name: Ensure pip is available for an extra dependency on Ubuntu 14.04.
   package:
-    name: curl
+    name: python-pip
     state: present
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_version == '14.04'
+
+- name: Ensure urllib3 is available on Ubuntu 14.04.
+  pip:
+    name: urllib3
+    state: present
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_version == '14.04'
 
 - name: Install Drupal Console.
   get_url:
