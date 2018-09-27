@@ -18,6 +18,7 @@
   when:
     - ansible_distribution == 'Ubuntu'
     - ansible_distribution_version == '14.04'
+  tags: ['skip_ansible_lint']
 
 - name: Ensure ndg-httpsclient is available on Ubuntu 14.04.
   pip:
@@ -38,8 +39,7 @@
     mode: 0755
 
 - name: Update Drupal Console to latest version (if configured).
-  shell: >
-    php {{ drupal_console_path }} self-update
+  command: php {{ drupal_console_path }} self-update
   register: drupal_console_update
   changed_when: "'console has been updated' in drupal_console_update.stdout"
   when: drupal_console_keep_updated
