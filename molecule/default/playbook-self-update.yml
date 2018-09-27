@@ -1,8 +1,11 @@
 ---
-- hosts: all
+- name: Converge
+  hosts: all
+  become: true
 
   vars:
     php_enable_webserver: false
+    drupal_console_keep_updated: true
 
   pre_tasks:
     - name: Update apt cache.
@@ -11,5 +14,5 @@
       changed_when: false
 
   roles:
-    - geerlingguy.php
-    - role_under_test
+    - role: geerlingguy.php
+    - role: geerlingguy.drupal-console
