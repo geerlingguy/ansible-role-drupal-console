@@ -3,6 +3,7 @@ dependencies:
   - geerlingguy.php
 
 galaxy_info:
+  role_name: drupal-console
   author: geerlingguy
   description: Drupal Console
   company: "Midwestern Mac, LLC"
