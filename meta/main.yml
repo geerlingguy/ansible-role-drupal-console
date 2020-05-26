@@ -3,7 +3,8 @@ dependencies:
   - geerlingguy.php
 
 galaxy_info:
-  role_name: drupal-console
+  # See: https://github.com/ansible/galaxy/issues/2393
+  # role_name: drupal-console
   author: geerlingguy
   description: Drupal Console
   company: "Midwestern Mac, LLC"
