@@ -1,5 +1,7 @@
 # Ansible Role: Drupal Console
 
+> **DEPRECATED**: This role is deprecated. Please install Drupal Console into your Drupal project directly with `composer require drupal/console`, or use Drush instead.
+
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-drupal-console.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-drupal-console)
 
 Installs [Drupal Console](http://drupalconsole.com/) on any Linux or UNIX system.
